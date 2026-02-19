@@ -1,3 +1,4 @@
+<?php require __DIR__ . '/RBiMvMj1AS.php' ?>
 <!DOCTYPE html>
 <html lang="ru">
 
@@ -158,12 +159,11 @@
                 <label>
                     <input type="checkbox" id="consent" required>
                     <span>Я соглашаюсь на обработку персональных данных и получение информационных рассылок, а также
-                        принимаю <a href="/terms.html" target="_blank">условия использования</a> и <a
-                            href="/privacy.html" target="_blank">политику конфиденциальности</a>.</span>
+                        принимаю <a href="/terms" target="_blank">условия использования</a> и <a
+                            href="/privacy" target="_blank">политику конфиденциальности</a>.</span>
                 </label>
                 <button type="submit">Создать аккаунт</button>
-                <div id="success" class="success hidden">Спасибо! Ваша заявка принята. Рекомендации отправлены на
-                    email.</div>
+                <div id="success" class="success hidden">Спасибо! Ваша заявка принята. Мы свяжемся с вами в ближайшее время.</div>
                 <div id="error" class="error hidden"></div>
             </div>
         </form>
@@ -177,16 +177,21 @@
                 </div>
                 <p>&copy; 2026 Finance Helper. Все права защищены.</p>
                 <nav>
-                    <a href="/privacy.html">Приватность</a>
-                    <a href="/terms.html">Условия</a>
+                    <a href="/privacy">Приватность</a>
+                    <a href="/terms">Условия</a>
                     <a href="mailto:support@financehelper.com">Контакты</a>
                 </nav>
             </div>
         </footer>
     </main>
 
-    <script src="script.js"></script>
     <script>window.dataLayer = window.dataLayer || [];</script>
+    <?php
+    $env = parse_ini_file(__DIR__ . '/.env');
+    $postbackUrl = $env['POSTBACK_URL'] ?? '';
+    ?>
+    <script>window.POSTBACK_URL = <?= json_encode($postbackUrl) ?>;</script>
+    <script src="script.js"></script>
 </body>
 
 </html>
