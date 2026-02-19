@@ -7,22 +7,22 @@
       "runtime": "vercel-php@0.6.0"
     }
   },
-  "rewrites": [
+  "routes": [
     {
-      "source": "/privacy",
-      "destination": "/privacy.html"
+      "src": "/privacy",
+      "dest": "/privacy.html"
     },
     {
-      "source": "/terms",
-      "destination": "/terms.html"
+      "src": "/terms",
+      "dest": "/terms.html"
     },
     {
-      "source": "/api/submit",
-      "destination": "/api/submit.php"
+      "src": "/api/submit",
+      "dest": "/api/submit.php"
     },
     {
-      "source": "/",
-      "destination": "/index.php"
+      "src": "/(.*)",
+      "dest": "/index.php"
     }
   ]
 }
