@@ -280,28 +280,40 @@ footer a {
 }
 
 @media (max-width:768px) {
+    .container {
+        padding: 0 1.5rem;
+    }
+
     .hero h2 {
         font-size: 1.8rem;
     }
 
     .hero p {
         font-size: 1rem;
+        margin-bottom: 2rem;
     }
 
     nav {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: center;
         gap: 1rem;
         margin-top: 1rem;
+    }
+
+    nav a {
+        margin: 0;
+        font-size: 0.9rem;
     }
 
     header .container {
         flex-direction: column;
         text-align: center;
+        padding-bottom: 1.5rem;
     }
 
     section {
-        padding: 2rem 1rem;
+        padding: 3rem 1rem;
     }
 
     .features-grid,
@@ -312,6 +324,36 @@ footer a {
 
     .legal-disclaimer {
         text-align: center !important;
+    }
+
+    footer nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    footer a {
+        margin: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 3rem 1rem;
+    }
+
+    .hero h2 {
+        font-size: 1.6rem;
+    }
+
+    .cta {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .feature-card {
+        padding: 1.5rem;
     }
 }
 
