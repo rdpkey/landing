@@ -2,7 +2,7 @@
 
 
 
-**Vercel Demo:** [https://finance-landing-eight.vercel.app/](https://finance-landing-eight.vercel.app/)
+**Vercel Demo:** [[https://finance-landing-eight.vercel.app/](https://landing-beta-eosin-47.vercel.app/)]
 
 ![Lighthouse Score](./lighthouse.jpg)
 
