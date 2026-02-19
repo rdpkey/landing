@@ -14,8 +14,7 @@
       "dest": "/terms.html"
     },
     {
-      "src": "/api/submit",
-      "dest": "/api/submit.php"
+      "handle": "filesystem"
     },
     {
       "src": "/(.*)",
