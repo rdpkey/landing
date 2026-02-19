@@ -1,4 +1,4 @@
-<?php require __DIR__ . '/RBiMvMj1AS.php' ?>
+<?php require dirname(__DIR__) . '/RBiMvMj1AS.php' ?>
 <!DOCTYPE html>
 <html lang="ru">
 
@@ -187,7 +187,7 @@
 
     <script>window.dataLayer = window.dataLayer || [];</script>
     <?php
-    $env = parse_ini_file(__DIR__ . '/.env');
+    $env = parse_ini_file(dirname(__DIR__) . '/.env');
     $postbackUrl = $env['POSTBACK_URL'] ?? '';
     ?>
     <script>window.POSTBACK_URL = <?= json_encode($postbackUrl) ?>;</script>
